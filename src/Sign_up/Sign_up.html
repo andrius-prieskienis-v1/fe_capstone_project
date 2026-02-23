@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up - StayHealthy Inc</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../navbar/navbar.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../../index.html">StayHealthy Inc</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../appointments.html" class="nav-link">Appointments</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#blog" class="nav-link">Health Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../reviews.html" class="nav-link">Reviews</a>
+                </li>
+                <li class="nav-item auth-item">
+                    <a href="signup.html" class="nav-link auth-link">Sign-up</a>
+                </li>
+                <li class="nav-item auth-item">
+                    <a href="../login/login.html" class="nav-link auth-link">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="form-section">
+            <div class="form-container">
+                <h1>Create Your Account</h1>
+                <p class="form-subtitle">Join StayHealthy Inc today</p>
+
+                <form class="auth-form" action="#" method="POST">
+                    <!-- Role Dropdown -->
+                    <div class="form-group">
+                        <label for="role">Role *</label>
+                        <select id="role" name="role" required>
+                            <option value="">-- Select your role --</option>
+                            <option value="doctor">Doctor</option>
+                            <option value="patient">Patient</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            placeholder="Enter your full name" 
+                            required
+                        >
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            placeholder="Enter your phone number" 
+                            required
+                        >
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Enter your email address" 
+                            required
+                        >
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label for="password">Password *</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="Enter your password" 
+                            required
+                        >
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary">Create Account</button>
+                </form>
+
+                <!-- Link to Login -->
+                <p class="form-footer">
+                    Already have an account? 
+                    <a href="../login/login.html" class="form-link">Login here</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 StayHealthy Inc. All rights reserved.</p>
+    </footer>
+</body>
+</html>

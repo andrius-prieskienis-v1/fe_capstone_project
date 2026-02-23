@@ -1,0 +1,708 @@
+/* ============================================
+   Global Styles
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2ecc71;
+    --primary-dark: #27ae60;
+    --secondary-color: #3498db;
+    --secondary-dark: #2980b9;
+    --text-color: #2c3e50;
+    --light-gray: #ecf0f1;
+    --border-color: #bdc3c7;
+    --footer-bg: #34495e;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: #f8f9fa;
+    line-height: 1.6;
+}
+
+/* ============================================
+   Navigation Bar Styles
+   ============================================ */
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.nav-logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-logo a:hover {
+    color: var(--primary-dark);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* Styling for Sign-up and Login items */
+.auth-item .auth-link {
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-item.auth-item:first-of-type .auth-link {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.nav-item.auth-item:first-of-type .auth-link:hover {
+    background-color: var(--secondary-dark);
+    color: white;
+}
+
+.nav-item.auth-item:last-of-type .auth-link {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.nav-item.auth-item:last-of-type .auth-link:hover {
+    background-color: var(--primary-dark);
+    color: white;
+}
+
+/* ============================================
+   Main Container
+   ============================================ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    min-height: calc(100vh - 70px - 100px);
+}
+
+/* ============================================
+   Hero Section (Home Page)
+   ============================================ */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+/* ============================================
+   Content Sections (Home Page)
+   ============================================ */
+.content-section {
+    background: white;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.content-section p {
+    color: #555;
+    line-height: 1.8;
+}
+
+/* ============================================
+   Form Styles
+   ============================================ */
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-container h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 32px;
+}
+
+.form-subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: var(--font-family);
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(46, 204, 113, 0.3);
+}
+
+/* Checkbox styling for remember me */
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.checkbox-group input {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.checkbox-label {
+    margin: 0;
+    font-weight: normal;
+    cursor: pointer;
+    color: #555;
+}
+
+/* ============================================
+   Button Styles
+   ============================================ */
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* ============================================
+   Form Footer Links
+   ============================================ */
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.form-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.form-link:hover {
+    color: var(--secondary-dark);
+    text-decoration: underline;
+}
+
+/* ============================================
+   Footer Styles
+   ============================================ */
+.footer {
+    background-color: var(--footer-bg);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* ============================================
+   Appointments Page Styles
+   ============================================ */
+.appointments-header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.appointments-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.appointments-header p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Search Section */
+.search-section {
+    margin-bottom: 40px;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-group {
+    display: flex;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: var(--font-family);
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(46, 204, 113, 0.3);
+}
+
+/* Doctors Section */
+.doctors-section {
+    margin-bottom: 40px;
+}
+
+.doctors-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Doctor Card */
+.doctor-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.doctor-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-color: var(--light-gray);
+}
+
+.doctor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.doctor-info {
+    padding: 20px;
+}
+
+.doctor-name {
+    color: var(--text-color);
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.doctor-specialty {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.doctor-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: #666;
+}
+
+.doctor-details span {
+    display: flex;
+    justify-content: space-between;
+}
+
+.experience {
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 8px;
+}
+
+.rating {
+    color: #f39c12;
+}
+
+.btn-book {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-book:hover {
+    background-color: var(--secondary-dark);
+}
+
+/* ============================================
+   Reviews Page Styles
+   ============================================ */
+.reviews-header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.reviews-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.reviews-header p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.reviews-section {
+    margin-bottom: 40px;
+}
+
+.reviews-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.reviews-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.reviews-table thead {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+.reviews-table th {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.reviews-table td {
+    padding: 15px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.reviews-table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.reviews-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.reviews-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.btn-review {
+    padding: 8px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-review:hover {
+    background-color: var(--primary-dark);
+}
+
+.review-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.review-rating {
+    font-weight: 600;
+    color: #f39c12;
+    font-size: 13px;
+}
+
+.review-text {
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 13px;
+}
+
+.no-review {
+    color: #999;
+    font-style: italic;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 768px) {
+    .nav-container {
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .nav-logo {
+        margin-bottom: 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 20px 15px;
+    }
+
+    .form-container {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+
+    .form-container h1 {
+        font-size: 24px;
+    }
+
+    .appointments-header h1 {
+        font-size: 28px;
+    }
+
+    .appointments-header p {
+        font-size: 16px;
+    }
+
+    .doctors-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .doctor-image {
+        height: 200px;
+    }
+
+    .doctor-info {
+        padding: 15px;
+    }
+
+    .search-input {
+        font-size: 14px;
+    }
+
+    .reviews-header h1 {
+        font-size: 28px;
+    }
+
+    .reviews-header p {
+        font-size: 16px;
+    }
+
+    .reviews-table {
+        font-size: 12px;
+    }
+
+    .reviews-table th,
+    .reviews-table td {
+        padding: 10px;
+    }
+
+    .btn-review {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+
+    .review-text {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu {
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+
+    .form-container {
+        padding: 20px 15px;
+    }
+
+    .auth-form {
+        gap: 0;
+    }
+}

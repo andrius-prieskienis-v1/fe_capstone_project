@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - StayHealthy Inc</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../navbar/navbar.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../../index.html">StayHealthy Inc</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../appointments.html" class="nav-link">Appointments</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#blog" class="nav-link">Health Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../reviews.html" class="nav-link">Reviews</a>
+                </li>
+                <li class="nav-item auth-item">
+                    <a href="../signup/signup.html" class="nav-link auth-link">Sign-up</a>
+                </li>
+                <li class="nav-item auth-item">
+                    <a href="login.html" class="nav-link auth-link">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="form-section">
+            <div class="form-container">
+                <h1>Welcome Back</h1>
+                <p class="form-subtitle">Login to your account</p>
+
+                <form class="auth-form" action="#" method="POST">
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Enter your email address" 
+                            required
+                        >
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label for="password">Password *</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="Enter your password" 
+                            required
+                        >
+                    </div>
+
+                    <!-- Remember Me -->
+                    <div class="form-group checkbox-group">
+                        <input 
+                            type="checkbox" 
+                            id="remember" 
+                            name="remember"
+                        >
+                        <label for="remember" class="checkbox-label">Remember me</label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+
+                <!-- Links -->
+                <p class="form-footer">
+                    <a href="#" class="form-link">Forgot password?</a>
+                </p>
+                <p class="form-footer">
+                    Don't have an account? 
+                    <a href="../signup/signup.html" class="form-link">Sign-up here</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 StayHealthy Inc. All rights reserved.</p>
+    </footer>
+</body>
+</html>
