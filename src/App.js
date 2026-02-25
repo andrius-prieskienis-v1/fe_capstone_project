@@ -7,7 +7,7 @@ import Navbar from './Components/Navbar/Navbar';
 import LandingPage from './Components/LandingPage/LandingPage';
 import SignUp from './Components/SignUp/SignUp';
 import Login from './Components/Login/Login';
-import InstantConsultation from './Components/InstantConsultationBooking/InstantConsultation';
+import FindDoctorSearch from './Components/FindDoctorSearch/FindDoctorSearch';
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
             <Route path='/' element={<LandingPage/>}/>
             <Route path='/signup' element={<SignUp/>}/>
             <Route path='/login' element={<Login/>}/>
-            <Route path="/instant-consultation" element={<InstantConsultation />} />
+            <Route path="/doctor-search" element={<FindDoctorSearch />} />
           </Routes>
         </BrowserRouter>
     </div>

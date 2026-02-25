@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './FindDoctorSearch.css';
 
 const FindDoctorSearch = () => {
@@ -8,24 +8,38 @@ const FindDoctorSearch = () => {
     const [doctorResultsVisible, setDoctorResultsVisible] = useState(false);
     const [searchInput, setSearchInput] = useState('');
     return (
-        <div className='find-doctor-search'>
-            <h2>Find a Doctor</h2>
-            <input 
-                type="text" 
-                placeholder="Search for doctors, specialties, or locations..." 
-                value={searchInput} 
-                onChange={(e) => setSearchInput(e.target.value)} 
-            />
-            <button onClick={() => setDoctorResultsVisible(true)}>Search</button>
-            <div className="doctor-results" style={{ display: doctorResultsVisible ? 'block' : 'none' }}>
-                {specialties.filter(specialty => specialty.toLowerCase().includes(searchInput.toLowerCase())).map((specialty, index) => (
-                    <div key={index} className="doctor-result-item">
-                        <h3>{specialty}</h3>
-                        <p>Find top {specialty} in your area.</p>
+        <main className="container">
+            <section className="form-section">
+                <div className="form-container" style={{ 'maxWidth': '100%', 'textAlign': 'center'}}>
+                    <div className='find-doctor-search'>
+                        <h1>Find a Doctor</h1>
+                        <div className="doctor-search-box">
+                            <input 
+                                type="text" 
+                                className='search-doctor-input-box'
+                                placeholder="Search for doctors, specialties, or locations..." 
+                                value={searchInput} 
+                                onChange={(e) => setSearchInput(e.target.value)} 
+                            />
+                            <button 
+                                className="search-btn" 
+                                onClick={() => setDoctorResultsVisible(true)}
+                            >
+                                Search
+                            </button>
+                        </div>
+                        <div className="doctor-results" style={{ display: doctorResultsVisible ? 'block' : 'none' }}>
+                            {specialties.filter(specialty => specialty.toLowerCase().includes(searchInput.toLowerCase())).map((specialty, index) => (
+                                <div key={index} className="doctor-result-item">
+                                    <h3>{specialty}</h3>
+                                    <p>Find top {specialty} in your area.</p>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                ))}
-            </div>
-        </div>
+                </div>
+            </section>
+        </main>
     );
 };
 
