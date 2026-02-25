@@ -1,9 +1,11 @@
 .doctor-search-box {
-    display: flex;
+    position: relative;
     align-items: center;
     width: 430px;
     margin-top: 25px;
     margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
     box-shadow: rgba(0, 0, 0,.1) 0 - 1px 0 0 inset;
     border-radius: 5px;
 }
@@ -15,6 +17,10 @@
     padding-left: 5px;
 }
 
+.search-input-block {
+    display: flex;
+    align-items: center;
+}
 .search-doctor-input-box {
     height: 40px;
     width: 100%;
@@ -37,15 +43,14 @@
     border: 1px solid rgb(59, 58, 58);
 }
 
-.search-doctor-input-results {
+.search-doctor-results {
     position: absolute;
-    top: 55%;
-    left: 0;
-    width: 100%;
+    top: 50px;
     z-index: 5;
     height: 420px;
     margin-top: 2px;
     border: 1px solid #555;
+    width: 700px;
 }
 
 .search-doctor-result-item {
