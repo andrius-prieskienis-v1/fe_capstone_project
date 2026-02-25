@@ -1,6 +1,8 @@
 import React from  'react';
 import './DoctorCard.css';
 
+import AppointmentForm from '../AppointmentForm/AppointmentForm';
+
 const DoctorCard = ({name, experience, ratings, specialty, photo}) => {
     return (
         <div class="doctor-card">
