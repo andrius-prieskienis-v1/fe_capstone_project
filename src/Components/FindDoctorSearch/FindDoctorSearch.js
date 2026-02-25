@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './FindDoctorSearch.css';
+import DoctorCard from '../DoctorCard/DoctorCard';
 
 const FindDoctorSearch = () => {
     const specialties = [
@@ -41,7 +42,33 @@ const FindDoctorSearch = () => {
                                 ))}
                             </div>
                         </div>
-                        
+                        <div class="doctors-section">
+                            <h3>8 doctors available</h3>
+                            <h4>Book appointment with minimum wait-time & verified doctor details</h4>
+                            <div class="doctors-grid">
+                                <DoctorCard
+                                    name="Dr. John Smith"
+                                    experience={15}
+                                    ratings={4.8}
+                                    specialty="Cardiologist"
+                                    photo="dr_john_smith.png"
+                                />
+                                <DoctorCard
+                                    name="Dr. Sarah Johnson"
+                                    experience={12}
+                                    ratings={4.6}
+                                    specialty="Dermatologist"
+                                    photo="dr_sarah_johnson.png"
+                                />
+                                <DoctorCard
+                                    name="Dr. Michael Brown"
+                                    experience={18}
+                                    ratings={4.9}
+                                    specialty="Orthopedic Surgeon"
+                                    photo="dr_micahel_brown.png"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
