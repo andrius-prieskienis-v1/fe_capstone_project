@@ -8,6 +8,7 @@ import LandingPage from './Components/LandingPage/LandingPage';
 import SignUp from './Components/SignUp/SignUp';
 import Login from './Components/Login/Login';
 import FindDoctorSearch from './Components/FindDoctorSearch/FindDoctorSearch';
+import BookingConsultation from './Components/BookingConsultation';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
             <Route path='/' element={<LandingPage/>}/>
             <Route path='/signup' element={<SignUp/>}/>
             <Route path='/login' element={<Login/>}/>
-            <Route path="/doctor-search" element={<FindDoctorSearch />} />
+            <Route path="/appointments" element={<BookingConsultation />} />
           </Routes>
         </BrowserRouter>
     </div>
