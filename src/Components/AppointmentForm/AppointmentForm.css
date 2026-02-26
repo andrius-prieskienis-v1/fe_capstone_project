@@ -1,0 +1,14 @@
+.appointment-container {
+    margin: auto;
+    width: 350px;
+    padding: 10px;
+}
+
+.appointment-form {
+    width: 100%;
+    margin: 20px;
+    padding: 15px;
+    background-color: #EEEEEE;
+    margin: auto;
+    border-radius: 5px;
+}

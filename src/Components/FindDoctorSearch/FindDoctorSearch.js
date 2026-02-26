@@ -50,21 +50,21 @@ const FindDoctorSearch = () => {
                                     name="Dr. John Smith"
                                     experience={15}
                                     ratings={4.8}
-                                    specialty="Cardiologist"
+                                    speciality="Cardiologist"
                                     photo="dr_john_smith.png"
                                 />
                                 <DoctorCard
                                     name="Dr. Sarah Johnson"
                                     experience={12}
                                     ratings={4.6}
-                                    specialty="Dermatologist"
+                                    speciality="Dermatologist"
                                     photo="dr_sarah_johnson.png"
                                 />
                                 <DoctorCard
                                     name="Dr. Michael Brown"
                                     experience={18}
                                     ratings={4.9}
-                                    specialty="Orthopedic Surgeon"
+                                    speciality="Orthopedic Surgeon"
                                     photo="dr_micahel_brown.png"
                                 />
                             </div>
