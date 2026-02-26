@@ -1,0 +1,10 @@
+.notification {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+    background-color: #3399fb;
+    border-radius: 10px;
+    color: #FFF;
+    padding: 15px;;
+}

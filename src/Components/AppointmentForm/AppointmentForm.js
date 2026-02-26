@@ -60,7 +60,7 @@ const AppointmentForm = ({
         setErrors(_errors);
         if (cnt == 0) {
             onSubmit({
-                name, date, time, phoneNumber
+                name, date, time, phoneNumber, doctorName, doctorSpeciality
             });
         }
     }

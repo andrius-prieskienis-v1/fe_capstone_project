@@ -9,6 +9,7 @@ import SignUp from './Components/SignUp/SignUp';
 import Login from './Components/Login/Login';
 import FindDoctorSearch from './Components/FindDoctorSearch/FindDoctorSearch';
 import BookingConsultation from './Components/BookingConsultation';
+import Notification from './Components/Notification/Notification';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <BrowserRouter>
           {/* Display the Navbar component */}
           <Navbar/>
+          <Notification />
           {/* Set up the Routes for different pages */}
           <Routes>
             {/* Define individual Route components for different pages */}

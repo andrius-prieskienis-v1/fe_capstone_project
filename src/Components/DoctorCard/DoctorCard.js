@@ -13,15 +13,19 @@ const DoctorCard = ({name, experience, ratings, speciality, photo}) => {
         const newAppointment = {
             id: uuidv4(),
             ...appointment,
-          };
-          const _appointments = [...appointments, newAppointment];
-          setAppointments(_appointments);
-          setShowModal(false);
+        };
+        const _appointments = [...appointments, newAppointment];
+        setAppointments(_appointments);
+        localStorage.setItem('appointmentData', JSON.stringify(newAppointment));
+        setShowModal(false);
+        window.dispatchEvent(new Event("new_appointment"));
     }
 
     const handleCancel = (id) => {
         const _appointments = appointments.filter((appointment) => appointment.id !== id);
         setAppointments(_appointments);
+        localStorage.removeItem('appointmentData');
+        window.dispatchEvent(new Event("cancel_appointment"));
     }
 
     return (
