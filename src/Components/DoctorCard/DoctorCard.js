@@ -2,12 +2,27 @@ import React, { useState } from  'react';
 import './DoctorCard.css';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
-
+import { v4 as uuidv4 } from 'uuid';
 import AppointmentForm from '../AppointmentForm/AppointmentForm';
 
 const DoctorCard = ({name, experience, ratings, speciality, photo}) => {
     const [ showModal, setShowModal ] = useState(false);
     const [ appointments, setAppointments ] = useState([]);
+
+    const handleSubmit = (appointment) => {
+        const newAppointment = {
+            id: uuidv4(),
+            ...appointment,
+          };
+          const _appointments = [...appointments, newAppointment];
+          setAppointments(_appointments);
+          setShowModal(false);
+    }
+
+    const handleCancel = (id) => {
+        const _appointments = appointments.filter((appointment) => appointment.id !== id);
+        setAppointments(_appointments);
+    }
 
     return (
         <div class="doctor-card">
@@ -28,7 +43,7 @@ const DoctorCard = ({name, experience, ratings, speciality, photo}) => {
                 <Popup
                     style={{ backgroundColor: '#FFFFFF', width: '300px' }}
                     trigger={
-                        <button className={`btn-book book-appointment-btn ${appointments.length > 0 ? 'cancel-appointment' : ''}`}>
+                        <button className={`btn-book book-appointment-btn ${appointments.length > 0 ? 'cancel-appointment-btn' : ''}`}>
                         {appointments.length > 0 ? (
                             <div>Cancel Appointment</div>
                         ) : (
@@ -43,12 +58,14 @@ const DoctorCard = ({name, experience, ratings, speciality, photo}) => {
                     >
                     {(close) => (
                         <>
-                            
                             <AppointmentForm
+                                appointments={appointments}
                                 doctorName={name}
                                 doctorExperience={experience}
                                 doctorRatings={ratings}
                                 doctorSpeciality={speciality}
+                                onSubmit={handleSubmit}
+                                onCancel={handleCancel}
                             />
                         </>
                     )}

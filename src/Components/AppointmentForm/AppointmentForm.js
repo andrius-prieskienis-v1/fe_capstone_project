@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
 import './AppointmentForm.css';
 
-const AppointmentForm = ({doctorName, doctorSpeciality, doctorExperience, doctorRatings}) => {
+const AppointmentForm = ({
+    appointments,
+    doctorName, 
+    doctorSpeciality, 
+    doctorExperience, 
+    doctorRatings,
+    onSubmit,
+    onCancel
+}) => {
     const [ name, setName ] = useState('');
     const [ phoneNumber, setPhoneNumber ] = useState('');
     const [ date, setDate ] = useState('');
@@ -29,21 +37,36 @@ const AppointmentForm = ({doctorName, doctorSpeciality, doctorExperience, doctor
         return times;
     };
 
-    const handleFormSubmit = () => {
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
         let _errors = {};
+        let cnt = 0;
         if (name?.length == 0) {
             _errors.name = 'Name is required';
+            cnt++;
         }
         if (phoneNumber?.length == 0) {
             _errors.phoneNumber = 'Phone number is required';
+            cnt++;
         }
         if (date?.length == 0) {
             _errors.date = 'Date of Appointment is required';
+            cnt++;
         }
         if (time?.length == 0) {
             _errors.time = 'Book Time Slot is required';
+            cnt++;
         }
         setErrors(_errors);
+        if (cnt == 0) {
+            onSubmit({
+                name, date, time, phoneNumber
+            });
+        }
+    }
+
+    const handleCancel = (id) => {
+        onCancel(id);
     }
 
     const timeOptions = generateTimes();
@@ -62,6 +85,7 @@ const AppointmentForm = ({doctorName, doctorSpeciality, doctorExperience, doctor
                     </span>
                 </div>
             </div>
+            {appointments.length == 0 ? (
             <form onSubmit={handleFormSubmit} className="appointment-form">
                 <div className="form-group">
                     <label htmlFor="name">Name:</label>
@@ -121,6 +145,20 @@ const AppointmentForm = ({doctorName, doctorSpeciality, doctorExperience, doctor
                 </div>
                 <button type="submit" className='btn-book'>Book Now</button>
             </form>
+            ) : (
+                <>
+                    <h3>Appointments booked</h3>
+                    {appointments.map((appointment) => (
+                    <div className="appointment-info" key={appointment.id}>
+                      <p>Name: {appointment.name}</p>
+                      <p>Phone Number: {appointment.phoneNumber}</p>
+                      <p>Date: {appointment.date}</p>
+                      <p>Time: {appointment.time}</p>
+                      <button className="btn-book cancel-appointment-btn" onClick={() => handleCancel(appointment.id)}>Cancel Appointment</button>
+                    </div>
+                  ))}
+                </>
+            )}
         </div>
     )
 }

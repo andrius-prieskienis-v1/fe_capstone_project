@@ -12,3 +12,8 @@
     margin: auto;
     border-radius: 5px;
 }
+
+.appointment-info {
+    padding: 5px;
+    border-bottom: 1px solid var(--light-gray);
+}
