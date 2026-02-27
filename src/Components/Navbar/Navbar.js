@@ -69,7 +69,14 @@ const Navbar = () => {
                         </>
                     )  : (
                         <>
-                            <div>Welcome, {name}</div>
+                            <li className="nav-item user-dropdown">
+                                <span className="welcome-text">
+                                    Welcome, {email.split("@")[0] || userName.split("@")[0]}
+                                </span>
+                                <div className="dropdown-content">
+                                    <a href="/profile">Your Profile</a>
+                                </div>
+                            </li>
                             <li className="nav-item auth-item">
                                 <a href="/logout" className="nav-link auth-link" onClick={(e) => handleLogout(e)}>Logout</a>
                             </li>
