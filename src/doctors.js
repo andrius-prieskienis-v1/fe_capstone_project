@@ -5,7 +5,8 @@ export const doctors = [
     speciality: "Cardiologist",
     experience: 15,
     rating: 4.8,
-    photo: "photos/dr_john_smith.png"
+    photo: "photos/dr_john_smith.png",
+    reviews: [],
   },
   {
     id: 2,
@@ -13,7 +14,8 @@ export const doctors = [
     speciality: "Dermatologist",
     experience: 12,
     rating: 4.6,
-    photo: "photos/dr_sarah_johnson.png"
+    photo: "photos/dr_sarah_johnson.png",
+    reviews: [],
   },
   {
     id: 3,
@@ -21,7 +23,8 @@ export const doctors = [
     speciality: "Orthopedic Surgeon",
     experience: 18,
     rating: 4.9,
-    photo: "photos/dr_micahel_brown.png"
+    photo: "photos/dr_micahel_brown.png",
+    reviews: [],
   },
   {
     id: 4,
@@ -29,7 +32,8 @@ export const doctors = [
     speciality: "Neurologist",
     experience: 14,
     rating: 4.7,
-    photo: "https://via.placeholder.com/250x250?text=Dr.+Emily+Davis"
+    photo: "https://via.placeholder.com/250x250?text=Dr.+Emily+Davis",
+    reviews: [],
   },
   {
     id: 5,
@@ -37,7 +41,8 @@ export const doctors = [
     speciality: "Gastroenterologist",
     experience: 16,
     rating: 4.5,
-    photo: "https://via.placeholder.com/250x250?text=Dr.+Robert+Wilson"
+    photo: "https://via.placeholder.com/250x250?text=Dr.+Robert+Wilson",
+    reviews: [],
   },
   {
     id: 6,
@@ -45,7 +50,8 @@ export const doctors = [
     speciality: "Pediatrician",
     experience: 11,
     rating: 4.8,
-    photo: "https://via.placeholder.com/250x250?text=Dr.+Lisa+Martinez"
+    photo: "https://via.placeholder.com/250x250?text=Dr.+Lisa+Martinez",
+    reviews: [],
   },
   {
     id: 7,
@@ -53,7 +59,8 @@ export const doctors = [
     speciality: "Pulmonologist",
     experience: 17,
     rating: 4.7,
-    photo: "https://via.placeholder.com/250x250?text=Dr.+James+Anderson"
+    photo: "https://via.placeholder.com/250x250?text=Dr.+James+Anderson",
+    reviews: [],
   },
   {
     id: 8,
@@ -61,6 +68,7 @@ export const doctors = [
     speciality: "Endocrinologist",
     experience: 13,
     rating: 4.6,
-    photo: "https://via.placeholder.com/250x250?text=Dr.+Jennifer+Garcia"
+    photo: "https://via.placeholder.com/250x250?text=Dr.+Jennifer+Garcia",
+    reviews: [],
   }
 ];

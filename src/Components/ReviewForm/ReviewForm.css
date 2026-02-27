@@ -7,3 +7,54 @@
     background-color: #EEEEEE;
     color: #000;
 }
+
+.review-container {
+    margin: auto;
+    width: 500px;
+    padding: 10px;
+}
+
+.review-form {
+    width: 100%;
+    margin: 20px;
+    padding: 15px;
+    background-color: #EEEEEE;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.reviewed {
+    background-color: #999;
+}
+
+.star-rating {
+    display: inline-flex;
+    gap: 0.2rem;
+    align-items:center;
+}
+
+.star-rating label {
+    padding: 0;
+    margin: 0;
+}
+
+.star-rating button {
+    background-color: transparent;
+    padding: 0.2rem;
+    margin: 0;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.star-rating i {
+    font-size: 1.5rem;
+}
+.on {
+    color: gold;
+}
+.off {
+    color: gray;
+}
