@@ -10,6 +10,7 @@ import Login from './Components/Login/Login';
 import FindDoctorSearch from './Components/FindDoctorSearch/FindDoctorSearch';
 import BookingConsultation from './Components/BookingConsultation';
 import Notification from './Components/Notification/Notification';
+import ReviewForm from './Components/ReviewForm/ReviewForm';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path='/signup' element={<SignUp/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path="/appointments" element={<BookingConsultation />} />
+            <Route path='/reviews' element={<ReviewForm/>} />
           </Routes>
         </BrowserRouter>
     </div>

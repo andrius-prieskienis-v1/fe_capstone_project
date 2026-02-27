@@ -1,0 +1,9 @@
+.reviews-table {
+    width: 100%;
+    text-align: left;
+}
+
+.reviews-table th {
+    background-color: #EEEEEE;
+    color: #000;
+}
