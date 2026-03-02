@@ -76,6 +76,9 @@ const Navbar = () => {
                                 <div className="dropdown-content">
                                     <a href="/profile">Your Profile</a>
                                 </div>
+                                <div className="dropdown-content">
+                                    <a href="/reports">Your Reports</a>
+                                </div>
                             </li>
                             <li className="nav-item auth-item">
                                 <a href="/logout" className="nav-link auth-link" onClick={(e) => handleLogout(e)}>Logout</a>

@@ -99,16 +99,53 @@ const ProfileCard = () => {
 
     return (
         <main className="container">
-            <section className="form-section">
+            <section className="form-section profile-container">
                 <div className='form-container' style={{ 'maxWidth': '100%', 'textAlign': 'center'}}>
                     <h1>Your Profile</h1>
-                    {editMode ? (
-                        <form onSubmit={handleFormSubmit}>
-
-                        </form>
-                    ) : (
+                    <form onSubmit={handleFormSubmit}>
+                        <div className='form-group'>
+                           <label htmlFor='name'>Name</label>
+                           <input
+                                id='name'
+                                name='name'
+                                value={updatedDetails.name}
+                                onChange={handleFormChange}
+                                disabled={!editMode}
+                                required
+                            /> 
+                        </div>
+                        <div className='form-group'>
+                           <label htmlFor='phone'>Phone Number</label>
+                           <input
+                                id='phone'
+                                name='phone'
+                                value={updatedDetails.phone}
+                                onChange={handleFormChange}
+                                disabled={!editMode}
+                                required
+                            /> 
+                        </div>
+                        <div className='form-group'>
+                           <label htmlFor='phone'>Email</label>
+                           <input
+                                id='email'
+                                name='email'
+                                value={updatedDetails.email}
+                                onChange={handleFormChange}
+                                disabled={!editMode}
+                                required
+                            /> 
+                        </div>
+                        {editMode && (
+                            <div className="profile-details">
+                                <button type="submit" className='btn-book'>Update Profile</button>
+                            </div>
+                            
+                        )}
+                    </form>
+                    {!editMode && (
                         <div className="profile-details">
-                            <button onClick={handleEditMode} className='btn-book'>Edit</button>
+                            <button type="button" onClick={handleEditMode} className='btn-book'>Edit</button>
                         </div>
                     )}
                 </div>
