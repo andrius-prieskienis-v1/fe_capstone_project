@@ -75,8 +75,6 @@ const Navbar = () => {
                                 </span>
                                 <div className="dropdown-content">
                                     <a href="/profile">Your Profile</a>
-                                </div>
-                                <div className="dropdown-content">
                                     <a href="/reports">Your Reports</a>
                                 </div>
                             </li>
