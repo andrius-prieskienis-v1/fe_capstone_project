@@ -1,1 +1,2 @@
-# fe_capstone_project
+# Medical Appointment Booking
+Front End Capstone Project
