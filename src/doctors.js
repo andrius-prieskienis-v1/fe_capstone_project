@@ -7,7 +7,7 @@ export const doctors = [
     rating: 4.8,
     photo: "photos/dr_john_smith.png",
     reviews: [],
-    reports: [],
+    reports: [1],
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const doctors = [
     rating: 4.6,
     photo: "photos/dr_sarah_johnson.png",
     reviews: [],
-    reports: [],
+    reports: [2],
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const doctors = [
     rating: 4.9,
     photo: "photos/dr_micahel_brown.png",
     reviews: [],
-    reports: [],
+    reports: [3],
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const doctors = [
     rating: 4.7,
     photo: "https://via.placeholder.com/250x250?text=Dr.+Emily+Davis",
     reviews: [],
-    reports: [],
+    reports: [4],
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ export const doctors = [
     rating: 4.5,
     photo: "https://via.placeholder.com/250x250?text=Dr.+Robert+Wilson",
     reviews: [],
-    reports: [],
+    reports: [5],
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ export const doctors = [
     rating: 4.8,
     photo: "https://via.placeholder.com/250x250?text=Dr.+Lisa+Martinez",
     reviews: [],
-    reports: [],
+    reports: [6],
   },
   {
     id: 7,
@@ -67,7 +67,7 @@ export const doctors = [
     rating: 4.7,
     photo: "https://via.placeholder.com/250x250?text=Dr.+James+Anderson",
     reviews: [],
-    reports: [],
+    reports: [7],
   },
   {
     id: 8,
@@ -77,6 +77,6 @@ export const doctors = [
     rating: 4.6,
     photo: "https://via.placeholder.com/250x250?text=Dr.+Jennifer+Garcia",
     reviews: [],
-    reports: [],
+    reports: [8],
   }
 ];
