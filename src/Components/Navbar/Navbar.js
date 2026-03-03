@@ -43,11 +43,11 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="nav-container">
                 <div className="nav-logo">
-                    <a href="../../index.html">StayHealthy Inc</a>
+                    <a href="/">StayHealthy Inc</a>
                 </div>
                 <ul className="nav-menu">
                     <li className="nav-item">
-                        <a href="../index.html" className="nav-link">Home</a>
+                        <a href="/" className="nav-link">Home</a>
                     </li>
                     <li className="nav-item">
                         <a href="/appointments" className="nav-link">Appointments</a>

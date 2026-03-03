@@ -1,13 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ReviewForm.css';
 import { doctors as doctorData } from '../../doctors';
 import Popup from 'reactjs-popup';
 import GiveReviewForm from './GiveReviewForm';
+import { useNavigate } from "react-router-dom";
 
 const ReviewForm = () => {
     const [showModal, setShowModal] = useState(false);
     const [ doctors, setDoctors ] = useState(doctorData);
 
+    const navigate = useNavigate();
+    
+    useEffect(() => {
+        const authtoken = sessionStorage.getItem("auth-token");
+        if (!authtoken) {
+            navigate("/login");
+        }
+    }, [navigate]);
+    
     const handleReviewSubmit = (updatedDoctor) => {
         let _doctors = doctors.map(
             (doctor) => doctor.id === updatedDoctor.id ? updatedDoctor : doctor
